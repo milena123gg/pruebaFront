@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isUpdating = false;
 
     const fetchProductos = async () => {
-        const response = await fetch('http://mile12345gg.pythonanywhere.com/productos');
+        const response = await fetch('https://mile12345gg.pythonanywhere.com/productos');
         const productos = await response.json();
         tableBody.innerHTML = '';
         productos.forEach(producto => {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const addProducto = async (producto) => {
-        await fetch('http://mile12345gg.pythonanywhere.com/nuevo_producto', {
+        await fetch('https://mile12345gg.pythonanywhere.com/nuevo_producto', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const deleteProducto = async (id) => {
-        await fetch(`http://mile12345gg.pythonanywhere.com/eliminar_producto/${id}`, {
+        await fetch(`https://mile12345gg.pythonanywhere.com/eliminar_producto/${id}`, {
             method: 'DELETE'
         });
         fetchProductos();
