@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const updateProducto = async (id, producto) => {
-        await fetch(`http://mile12345gg.pythonanywhere.com/actualizar_producto/${id}`, {
+        await fetch(`https://mile12345gg.pythonanywhere.com/actualizar_producto/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
